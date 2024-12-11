@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_dossier_exams",
+  "info": {
+    "displayName": "exam"
+  },
+  "options": {},
+  "attributes": {
+    "session": {
+      "type": "string"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "end_date": {
+      "type": "date"
+    },
+    "emploi_du_temps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "dossier.emploi-du-temps"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject"
+    }
+  }
+}

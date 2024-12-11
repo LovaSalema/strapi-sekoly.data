@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "monthly_finances",
+  "info": {
+    "singularName": "monthly-finance",
+    "pluralName": "monthly-finances",
+    "displayName": "monthly_finance"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "month": {
+      "type": "string"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student"
+    },
+    "staff": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prof.prof"
+    },
+    "total_income": {
+      "type": "biginteger"
+    },
+    "total_outcome": {
+      "type": "biginteger"
+    },
+    "benefice": {
+      "type": "biginteger"
+    },
+    "charge_fixe": {
+      "type": "biginteger"
+    },
+    "school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school.school",
+      "inversedBy": "monthly_finances"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "father_students",
+  "info": {
+    "singularName": "father-student",
+    "pluralName": "father-students",
+    "displayName": "Father_student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "Exist": {
+      "type": "enumeration",
+      "enum": [
+        "alive",
+        "dead"
+      ]
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student",
+      "mappedBy": "father_student"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    }
+  }
+}

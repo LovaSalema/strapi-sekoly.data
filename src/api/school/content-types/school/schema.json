@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schools",
+  "info": {
+    "singularName": "school",
+    "pluralName": "schools",
+    "displayName": "School",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "School_name": {
+      "type": "string"
+    },
+    "adress": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "expiration_date": {
+      "type": "date"
+    },
+    "class_rooms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class-room.class-room",
+      "mappedBy": "school"
+    },
+    "classes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::classe.classe",
+      "mappedBy": "school"
+    },
+    "ecolages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ecolage.ecolage",
+      "mappedBy": "school"
+    },
+    "fournitures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fourniture.fourniture",
+      "mappedBy": "school"
+    },
+    "monthly_finances": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::monthly-finance.monthly-finance",
+      "mappedBy": "school"
+    },
+    "staff": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prof.prof",
+      "mappedBy": "school"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "school"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject",
+      "mappedBy": "school"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "school"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "devise": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

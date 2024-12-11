@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_dossier_emploi_du_temps",
+  "info": {
+    "displayName": "emploi-du-temps",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "debut": {
+      "type": "time"
+    },
+    "fin": {
+      "type": "time"
+    },
+    "prof": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prof.prof"
+    },
+    "class_room": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class-room.class-room"
+    }
+  }
+}

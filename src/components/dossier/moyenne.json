@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_dossier_moyennes",
+  "info": {
+    "displayName": "moyenne"
+  },
+  "options": {},
+  "attributes": {
+    "observation": {
+      "type": "string"
+    },
+    "average": {
+      "type": "decimal"
+    },
+    "session": {
+      "type": "date"
+    }
+  }
+}

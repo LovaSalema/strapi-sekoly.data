@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fournitures",
+  "info": {
+    "singularName": "fourniture",
+    "pluralName": "fournitures",
+    "displayName": "fourniture",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fourniture_name": {
+      "type": "string"
+    },
+    "stocks": {
+      "type": "integer"
+    },
+    "fourniture_price": {
+      "type": "biginteger"
+    },
+    "buying_date": {
+      "type": "date"
+    },
+    "total_fourniture": {
+      "type": "integer"
+    },
+    "total_price": {
+      "type": "biginteger"
+    },
+    "school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school.school",
+      "inversedBy": "fournitures"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_dossier_disponibility_profs",
+  "info": {
+    "displayName": "disponibility.prof",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "startdate": {
+      "type": "date"
+    },
+    "enddate": {
+      "type": "date"
+    }
+  }
+}

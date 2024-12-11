@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "Subject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject_name": {
+      "type": "string"
+    },
+    "score": {
+      "type": "decimal"
+    },
+    "coefficient": {
+      "type": "integer"
+    },
+    "observation": {
+      "type": "string"
+    },
+    "validation": {
+      "type": "enumeration",
+      "enum": [
+        "valid",
+        "invalid"
+      ]
+    },
+    "files": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "staff": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prof.prof",
+      "mappedBy": "subject"
+    },
+    "school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school.school",
+      "inversedBy": "subjects"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_rooms",
+  "info": {
+    "singularName": "class-room",
+    "pluralName": "class-rooms",
+    "displayName": "class_room"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "room_name": {
+      "type": "string"
+    },
+    "capacity": {
+      "type": "integer"
+    },
+    "chaise_dispo": {
+      "type": "integer"
+    },
+    "school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school.school",
+      "inversedBy": "class_rooms"
+    }
+  }
+}

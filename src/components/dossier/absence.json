@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_dossier_absences",
+  "info": {
+    "displayName": "absence",
+    "icon": "thumbDown",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isAbsent": {
+      "type": "boolean"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

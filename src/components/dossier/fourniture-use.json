@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_dossier_fourniture_uses",
+  "info": {
+    "displayName": "fourniture_use",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "observation": {
+      "type": "string"
+    },
+    "fournitures": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::fourniture.fourniture"
+    },
+    "number_taken": {
+      "type": "integer"
+    },
+    "date_of_take": {
+      "type": "datetime"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    }
+  }
+}

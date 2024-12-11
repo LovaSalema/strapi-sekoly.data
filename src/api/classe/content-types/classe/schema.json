@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "singularName": "classe",
+    "pluralName": "classes",
+    "displayName": "Classe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "classe_name": {
+      "type": "string"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "classe"
+    },
+    "profs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::prof.prof",
+      "mappedBy": "classes"
+    },
+    "EDT": {
+      "type": "dynamiczone",
+      "components": [
+        "dossier.emploi-du-temps"
+      ]
+    },
+    "exams": {
+      "type": "dynamiczone",
+      "components": [
+        "dossier.exam"
+      ]
+    },
+    "fourniture_class": {
+      "type": "component",
+      "repeatable": true,
+      "component": "dossier.fourniture-use"
+    },
+    "school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school.school",
+      "inversedBy": "classes"
+    }
+  }
+}

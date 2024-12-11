@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_dossier_diploms",
+  "info": {
+    "displayName": "diplom",
+    "icon": "envelop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "diplom_name": {
+      "type": "string"
+    },
+    "delivery_date": {
+      "type": "date"
+    },
+    "diplom_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "obtention_date": {
+      "type": "date"
+    }
+  }
+}

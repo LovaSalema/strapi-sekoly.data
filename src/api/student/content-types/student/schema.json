@@ -1,0 +1,99 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "StudentID": {
+      "type": "uid"
+    },
+    "date_of_birth": {
+      "type": "date"
+    },
+    "sexe": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "student_photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "mother_student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::mother-student.mother-student",
+      "inversedBy": "student"
+    },
+    "father_student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::father-student.father-student",
+      "inversedBy": "student"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subject.subject"
+    },
+    "ecolages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ecolage.ecolage",
+      "mappedBy": "student"
+    },
+    "email": {
+      "type": "email"
+    },
+    "absent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "dossier.absence"
+    },
+    "classe": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::classe.classe",
+      "inversedBy": "students"
+    },
+    "exam": {
+      "type": "dynamiczone",
+      "components": [
+        "dossier.moyenne",
+        "dossier.absence"
+      ]
+    },
+    "school": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::school.school",
+      "inversedBy": "students"
+    }
+  }
+}
